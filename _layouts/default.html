@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+  <input type="checkbox" id="nav-toggle" class="nav-toggle">
+  <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation">☰</label>
+
+  <nav class="sidebar">
+    <div class="sidebar-title">
+      <a href="{{ '/' | relative_url }}">{{ site.title }}</a>
+    </div>
+    <ul>
+      {% for item in site.data.nav %}
+      {% assign is_active = false %}
+      {% if item.url == '/' %}
+        {% if page.url == '/' or page.url == '/index.html' %}{% assign is_active = true %}{% endif %}
+      {% elsif page.url contains item.url %}
+        {% assign is_active = true %}
+      {% endif %}
+      <li>
+        <a href="{{ item.url | relative_url }}" {% if is_active %}class="active"{% endif %}>
+          {{ item.title }}
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </nav>
+
+  <main class="content">
+    <article>
+      {{ content }}
+    </article>
+  </main>
+</body>
+</html>

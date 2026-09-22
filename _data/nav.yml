@@ -1,0 +1,10 @@
+- title: Home
+  url: /
+- title: Architecture Decision Records
+  url: /adr/
+- title: Engineering Standards
+  url: /standards/
+- title: Language-Specific Recommendations
+  url: /language-recommendations/
+- title: CI/CD Framework
+  url: /cicd/

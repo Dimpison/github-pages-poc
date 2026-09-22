@@ -13,11 +13,15 @@ Decision Records (ADRs) and engineering standards: a GitHub repo + Pages, or
 Confluence?** — and the answer is written up as the ADR below, using the same
 mechanism it's arguing for.
 
-## Architecture Decision Records
+## Sections
 
-| ID | Title | Status |
-|----|-------|--------|
-| [ADR-0001](adr/0001-platform-for-adrs-and-standards.html) | Platform for storing ADRs and engineering standards | Proposed |
+- **[Architecture Decision Records](adr/)** — one ADR so far, comparing
+  this approach against Confluence.
+- **[Engineering Standards](standards/)** — placeholder.
+- **[Language-Specific Recommendations](language-recommendations/)** — placeholder.
+- **[CI/CD Framework](cicd/)** — placeholder.
+
+Use the navigation panel on the left to jump between sections.
 
 ## Why this POC
 
