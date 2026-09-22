@@ -1,0 +1,5 @@
+title: Engineering Docs POC
+description: Proof of concept — storing ADRs and engineering standards in a GitHub repo, published via GitHub Pages.
+theme: jekyll-theme-cayman
+
+markdown: kramdown
